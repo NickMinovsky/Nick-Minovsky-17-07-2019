@@ -1,5 +1,6 @@
 // =================================== Table ===================================
 .subtitle {
+  margin-bottom: 5px;
   font-weight: 300;
   text-align: center;
   color: #000;
@@ -12,6 +13,9 @@
 .grid {
   width: 100%;
   display: flex;
+  @media screen and (max-width: 599px) {
+    flex-direction: column;
+  }
   align-items: center;
   justify-content: space-evenly;
   justify-content: center;
@@ -98,4 +102,13 @@
 
 .current-table:nth-child(1st) {
   background-color: red;
+}
+
+.top-arrow {
+  display: none;
+  text-decoration: none;
+  color: red;
+  @media screen and (max-width: 499px) {
+    display: block;
+  }
 }

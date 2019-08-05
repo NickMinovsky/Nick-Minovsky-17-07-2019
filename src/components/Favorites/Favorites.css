@@ -2,4 +2,127 @@
   height: 100%;
   width: 100%;
 }
+
+.fav-container {
+  margin-bottom: 100px;
+}
+
+.fav-title {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.fav-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border: solid 1px #41403e;
+  -webkit-box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+          box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  width: 100%;
+  margin-bottom: 40px;
+  background-color: #29f7dc;
+  opacity: 0.8;
+  color: #fff;
+  -webkit-transition: background-color 300ms, opacity 1s;
+  transition: background-color 300ms, opacity 1s;
+}
+
+@media screen and (max-width: 599px) {
+  .fav-box {
+    padding: 10px;
+    opacity: 1;
+  }
+}
+
+.fav-box:hover {
+  background-color: #29d8f7;
+  opacity: 1;
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+}
+
+.fav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+}
+
+.fav-item__name {
+  font-size: 2rem;
+  margin-right: 10px;
+  margin: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .fav-item__name {
+    font-size: 1.2rem;
+  }
+}
+
+.fav-item__weather {
+  font-size: 1.2rem;
+  margin: 10px 0px 10px 0px;
+  margin: 0;
+  line-height: 0.5;
+}
+
+@media screen and (max-width: 599px) {
+  .fav-item__weather {
+    font-size: 0.8rem;
+  }
+}
+
+.fav-item__degree {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .fav-item__degree {
+    font-size: 1.5rem;
+  }
+}
+
+.fav-btn.two {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
+.fav-btn {
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+}
+
+.fav-btn:hover {
+  background-color: #d293e2;
+}
 /*# sourceMappingURL=Favorites.css.map */

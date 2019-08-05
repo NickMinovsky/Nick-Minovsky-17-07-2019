@@ -10,7 +10,9 @@ import "./App.css";
 
 class App extends Component {
   componentDidMount() {
-    AOS.init();
+    AOS.init({
+      once: true
+    });
   }
   render() {
     return (

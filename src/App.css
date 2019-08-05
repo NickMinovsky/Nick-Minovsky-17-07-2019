@@ -4,6 +4,7 @@ html {
   font-family: "Roboto";
   margin: 0 !important;
   padding: 0 !important;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -46,6 +47,13 @@ body {
           animation: blink 1s forwards;
   -webkit-animation-iteration-count: 3;
           animation-iteration-count: 3;
+}
+
+@media screen and (max-width: 599px) {
+  .fav-error {
+    margin: 0;
+    margin-bottom: 10px;
+  }
 }
 
 @-webkit-keyframes blink {

@@ -6,7 +6,6 @@ import { addFav } from "../../../store/actions/";
 import isAdded from "../../../services/DuplicateValidation";
 
 import "./Today.css";
-import { Button } from "@material-ui/core";
 import Favorite from "@material-ui/icons/Favorite";
 import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 
@@ -45,7 +44,7 @@ const Today = props => {
         />
         <p className="current-weather__circle-degree">{current.temp_c} °C</p>
       </div>
-      <p className="fav-error">{props.error}</p>
+      <p className="fav-error">{props.error} </p>
       <div>
         <button
           className="fav-btn"

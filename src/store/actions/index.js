@@ -6,8 +6,7 @@ import {
   SEARCH_ITEM,
   DELETE_FAV,
   INPUT_ERROR,
-  FAV_ERROR,
-  RELOAD
+  FAV_ERROR
 } from "./types";
 
 // Data api fetching
@@ -47,10 +46,5 @@ export const deleteFav = cityId => ({
 // Error Handleing
 export const inputError = message => ({
   type: INPUT_ERROR,
-  payload: message
-});
-
-export const favError = message => ({
-  type: FAV_ERROR,
   payload: message
 });

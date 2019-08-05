@@ -1,19 +1,10 @@
 import { INPUT_ERROR, FAV_ERROR } from "../actions/types";
 
-const initialState = {
-  inputError: " ",
-  favError: " "
-};
-
-const errorReducer = (state = initialState, { type, payload }) => {
+const errorReducer = (state = "", { type, payload }) => {
   switch (type) {
     case INPUT_ERROR:
       return {
         inputError: payload
-      };
-    case FAV_ERROR:
-      return {
-        favError: payload
       };
     default:
       return state;

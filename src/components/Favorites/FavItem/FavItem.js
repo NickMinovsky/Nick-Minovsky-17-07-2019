@@ -1,16 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  withRouter
-} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import { deleteFav } from "../../../store/actions/";
 import fetchApiAction from "../../../services/fetchApi";
 import searchItemAction from "../../../store/actions/";
+import DeleteForeverOutlinedIcon from "@material-ui/icons/DeleteForeverOutlined";
+import Search from "@material-ui/icons/Search";
 
 const FavItem = props => {
   const searchFav = async cityId => {
@@ -24,24 +21,30 @@ const FavItem = props => {
   };
 
   return (
-    <div>
-      <p>{props.name}</p>
-      <p>{props.temp}°C</p>
-      <p>{props.condition}</p>
-      <button
-        onClick={() => {
-          props.deleteFav(props.name);
-        }}
-      >
-        Delete
-      </button>
-      <button
-        onClick={() => {
-          searchFav(props.name);
-        }}
-      >
-        Search
-      </button>
+    <div className="fav-box">
+      <div className="fav-item">
+        <p className="fav-item__name"> {props.name}</p>
+        <p className="fav-item__weather">{props.condition}</p>
+        <p className="fav-item__degree">{props.temp}°C</p>
+      </div>
+      <div className="btns">
+        <button
+          className="fav-btn two"
+          onClick={() => {
+            props.deleteFav(props.name);
+          }}
+        >
+          delete <DeleteForeverOutlinedIcon />
+        </button>
+        <button
+          className="fav-btn two"
+          onClick={() => {
+            searchFav(props.name);
+          }}
+        >
+          search <Search />
+        </button>
+      </div>
     </div>
   );
 };

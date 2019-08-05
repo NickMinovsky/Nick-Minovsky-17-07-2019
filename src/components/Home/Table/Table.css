@@ -1,4 +1,5 @@
 .subtitle {
+  margin-bottom: 5px;
   font-weight: 300;
   text-align: center;
   color: #000;
@@ -24,6 +25,15 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 2rem;
+}
+
+@media screen and (max-width: 599px) {
+  .grid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .current-table {
@@ -114,5 +124,17 @@
 
 .current-table:nth-child(1st) {
   background-color: red;
+}
+
+.top-arrow {
+  display: none;
+  text-decoration: none;
+  color: red;
+}
+
+@media screen and (max-width: 499px) {
+  .top-arrow {
+    display: block;
+  }
 }
 /*# sourceMappingURL=Table.css.map */

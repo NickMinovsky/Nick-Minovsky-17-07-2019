@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Today from "./Today/Today";

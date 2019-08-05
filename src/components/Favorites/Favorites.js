@@ -10,23 +10,23 @@ const Favorites = props => {
   return (
     <Container maxWidth="lg">
       <div className="fav-content">
-        <p>
-          {favList.length === 0 ? "You have no favorites" : "Your favorites"}
+        <p className="fav-title">
+          {favList.length === 0 ? "You have no favorites" : "Your favorites:"}
         </p>
-        <ul>
+        <div className="fav-container">
           {favList.map((city, index) => {
             return (
-              <li key={index}>
+              <div key={index}>
                 <FavItem
                   name={city.name}
                   temp={city.temp}
                   condition={city.condition}
                   icon={city.icon}
                 />
-              </li>
+              </div>
             );
           })}
-        </ul>
+        </div>
       </div>
     </Container>
   );

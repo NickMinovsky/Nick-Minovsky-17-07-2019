@@ -17,10 +17,16 @@ const ForecastTable = props => {
       <Grid container className="grid">
         {data.forecast.forecastday.map((day, index) => {
           return (
-            <Grid item className="current-table" lg={1} md={6} sm={12}>
+            <Grid
+              key={index}
+              item
+              className="current-table"
+              lg={1}
+              md={6}
+              sm={12}
+            >
               <TableItem
                 className="table-item"
-                key={index}
                 day={moment(day.date).format("dddd")}
                 weather={day.day.condition.text}
                 icon={day.day.condition.icon}
@@ -29,6 +35,9 @@ const ForecastTable = props => {
             </Grid>
           );
         })}
+        <a className="top-arrow" href="#top">
+          &#x2191; Take me up
+        </a>
       </Grid>
     </div>
   );

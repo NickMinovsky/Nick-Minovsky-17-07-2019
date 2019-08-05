@@ -43,7 +43,7 @@ class Nav extends Component {
   render() {
     const { error } = this.props;
     return (
-      <div className="navbar">
+      <div id="top" className="navbar">
         <div className="left">
           <form onSubmit={this.onSubmit} id="search-form">
             <TextField

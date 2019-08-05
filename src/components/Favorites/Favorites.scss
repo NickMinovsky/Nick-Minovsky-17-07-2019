@@ -2,3 +2,86 @@
   height: 100%;
   width: 100%;
 }
+.fav-container {
+  margin-bottom: 100px;
+}
+.fav-title {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.fav-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  @media screen and (max-width: 599px) {
+    padding: 10px;
+    opacity: 1;
+  }
+  border: solid 1px #41403e;
+  box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, 0.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  width: 100%;
+  margin-bottom: 40px;
+  background-color: #29f7dc;
+  opacity: 0.8;
+
+  color: #fff;
+  transition: background-color 300ms, opacity 1s;
+}
+
+.fav-box:hover {
+  background-color: #29d8f7;
+  opacity: 1;
+}
+.btns {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  height: 100%;
+}
+
+.fav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+
+  &__name {
+    font-size: 2rem;
+    margin-right: 10px;
+    margin: 0;
+    @media screen and (max-width: 599px) {
+      font-size: 1.2rem;
+    }
+  }
+  &__weather {
+    font-size: 1.2rem;
+    margin: 10px 0px 10px 0px;
+    margin: 0;
+    line-height: 0.5;
+    @media screen and (max-width: 599px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__degree {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    @media screen and (max-width: 599px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+.fav-btn.two {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
+.fav-btn {
+  transition: background-color 300ms;
+  &:hover {
+    background-color: rgb(210, 147, 226);
+  }
+}
